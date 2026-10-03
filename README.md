@@ -1,4 +1,4 @@
-# whisper
+# Podcast Transcriber
 
 Transcribe podcast episodes (or any mp3) to plain text with OpenAI's Whisper API.
 
