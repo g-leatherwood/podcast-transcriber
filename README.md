@@ -45,12 +45,12 @@ Both arguments are required. Run the command from the project folder so the `.en
 Transcribe an episode from your Downloads folder and keep the transcript in a `podcast_notes` folder:
 
 ```sh
-python main.py ~/Downloads/ferriss-881.mp3 ~/podcast_notes/ferriss-881
+python main.py ~/Downloads/podcast-name.mp3 ~/podcast_notes/podcast-name
 ```
 
-This writes `~/podcast_notes/ferriss-881.txt`. If `~/podcast_notes` doesn't exist yet, it's created for you.
+This writes `~/podcast_notes/podcast-name.txt`. If `~/podcast_notes` doesn't exist yet, it's created for you.
 
-While it runs, temporary chunk files (`ferriss-881.mp3_1_ten.mp3`, `ferriss-881.mp3_2_ten.mp3`, …) are created next to the original mp3. They're deleted once the transcript is written. If something fails before then, they're kept.
+While it runs, temporary chunk files (`podcast-name.mp3_1_ten.mp3`, `podcast-name.mp3_2_ten.mp3`, …) are created next to the original mp3. They're deleted once the transcript is written. If something fails before then, they're kept.
 
 ### Notes
 
