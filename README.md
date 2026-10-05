@@ -21,7 +21,15 @@ The episode is split into 10-minute chunks so it stays under Whisper's upload si
 
 ## Setup
 
-Install the requirements above with whatever tool you use, then create a `.env` file in the project folder with your API key:
+Install the Python packages. The repo includes a `uv.lock`, so with [uv](https://docs.astral.sh/uv/) it's:
+
+```sh
+uv sync
+```
+
+Or install the packages above with whatever tool you use.
+
+Then create a `.env` file in the project folder with your API key:
 
 ```
 OPENAI_API_KEY=sk-...
@@ -35,7 +43,9 @@ OPENAI_API_KEY=sk-...
 python main.py <path_to_file> <output_name>
 ```
 
-Both arguments are required. Run the command from the project folder so the `.env` file is found.
+If you installed with uv, run `uv run main.py` from the project folder in place of `python main.py`, or activate the virtual environment first with `source .venv/bin/activate`.
+
+Both arguments are required. The `.env` file is always read from the project folder, even if you run `main.py` from somewhere else.
 
 - `path_to_file`: the mp3 to transcribe
 - `output_name`: where to write the transcript, **without** `.txt`, which is added for you. This can be a path to another folder.
